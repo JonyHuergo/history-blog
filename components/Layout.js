@@ -2,12 +2,12 @@ import Navbar from './Navbar'
 
 const Layout = ({children}) => {
     return ( 
-        <>
-        <Navbar/>
-        <main>
-            {children}
-        </main>
-        </>
+        <div className='lg:px-[5%]'>
+            <Navbar/>
+            <main>
+                {children}
+            </main>
+        </div>
     );
 }
  
