@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+/* RESET */
+
 html,
 body {
   padding: 0;
@@ -28,13 +30,13 @@ img {
   display: block;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+/* ////////// */
+/* BACKGROUND */
 
-  body {
-    color: white;
-    background: black;
-  }
+body {
+  background-image: url("../public/bg.svg");
+  background-size: 240px;
+  background-color: #14213D;
 }
+
+/* ////////// */
