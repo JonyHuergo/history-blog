@@ -3,12 +3,6 @@ import Link from "next/link";
 
 const { DateTime } = require("luxon");
 
-/* useEffect((post) => {
-    setPostDate((post) => DateTime.fromISO(post.createdAt).toLocaleString(DateTime.DATETIME_MED))
-}, []); */
-
-/* setPostDate((post) => DateTime.fromISO(post.createdAt).toLocaleString(DateTime.DATETIME_MED))
- */
 const PostCard = ({ post }) => {
     const [postDate, setPostDate] = useState("");
     useEffect(() => {
@@ -26,9 +20,7 @@ const PostCard = ({ post }) => {
                 />
             </div>
             <div>
-                <Link href={`./posts/${post.slug}`}>
-                    <h2 className="text-center text-4xl text-bold">{post.title}</h2>
-                </Link> 
+                <h2 className="text-center text-4xl text-bold">{post.title}</h2>
             </div>
             <div>
                 <div>
@@ -50,7 +42,13 @@ const PostCard = ({ post }) => {
             </div>
             <div>
                 <p>{post.excerpt}</p>
-            </div>    
+            </div>
+            <div className="text-center">
+                <Link href={`./posts/${post.slug}`}>
+                    <button className="transition duration-500 transform hover:-translate-y-1 inline-block bg-pink-600 text-lg font-medium rounded-full text-white px-8 py-3 cursor-pointer">Seguir leyendo</button>
+                </Link>
+            </div>
+               
         </article>
     );
 }
