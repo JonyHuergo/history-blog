@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import { getPosts } from '../services'
+import PostCard from '../components/PostCard';
 
 export default function Home({ posts }) {
   return (
@@ -8,6 +9,9 @@ export default function Home({ posts }) {
         <title>History Blog</title>
         <meta name="description" content="Blog de historia" />
       </Head>
+      <div>
+        {posts.map(post => <PostCard post={post.node} key={post.node.title}/>)}
+      </div>
     </>
   )
 }
