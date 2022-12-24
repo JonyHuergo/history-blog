@@ -11,7 +11,7 @@ const PostCard = ({ post }) => {
     }, []); 
 
     return (
-        <article className="bg-white shadow-lg rounded-lg">
+        <article className="bg-neutral-light shadow-lg rounded-lg">
             <div className="relative overflow-hidden pb-80">
                 <img
                     src={post.featuredImage.url}
@@ -45,7 +45,7 @@ const PostCard = ({ post }) => {
             </div>
             <div className="text-center">
                 <Link href={`./posts/${post.slug}`}>
-                    <button className="transition duration-500 transform hover:-translate-y-1 inline-block bg-pink-600 text-lg font-medium rounded-full text-white px-8 py-3 cursor-pointer">Seguir leyendo</button>
+                    <button className="transition duration-500 transform hover:-translate-y-1 inline-block bg-primary text-lg font-medium rounded-full text-neutral-light px-8 py-3 cursor-pointer">Seguir leyendo</button>
                 </Link>
             </div>
                
