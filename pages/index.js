@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import { getPosts } from '../services'
 import PostCard from '../components/PostCard';
+import PostWidget from '../components/PostWidget';
 
 export default function Home({ posts }) {
   return (
@@ -12,6 +13,7 @@ export default function Home({ posts }) {
       <div>
         {posts.map(post => <PostCard post={post.node} key={post.node.title}/>)}
       </div>
+      <PostWidget/>
     </>
   )
 }
