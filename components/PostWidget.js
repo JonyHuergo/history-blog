@@ -19,6 +19,19 @@ const PostWidget = ({ categories, slug }) => {
             <h3 className="text-xl mb-8 font-semibold border-b border-secondary pb-4">
                 { slug ? "Posts Relacionados" : "Posts Recientes"}
             </h3>
+            {widgetPosts.map((post) => {
+                <article key={post.title} className="flex items-center w-full">
+                    <div className="w-16 flex-none">
+                        <img
+                            src={post.featuredImage.url}
+                            alt={post.title}
+                            height="60px"
+                            width="60px"
+                            className="align-middle rounded-full"
+                        />
+                    </div>
+                </article>
+            })}
         </section>
     );
 }
