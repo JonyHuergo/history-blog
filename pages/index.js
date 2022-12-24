@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import styles from '../styles/Home.module.css'
 import { getPosts } from '../services'
 
 export default function Home({ posts }) {
