@@ -2,15 +2,15 @@ import { useState, useEffect } from "react";
 import { getRelatedPosts, getRecentPosts } from '../services'
 
 const PostWidget = ({ categories, slug }) => {
-    const [relatedPosts, setRelatedPosts] = useState([])
+    const [widgetPosts, setWidgetPosts] = useState([])
 
     useEffect(() => {
         if(slug) {
             getRelatedPosts(categories, slug)
-                .then((result) => setRelatedPosts(result))
+                .then((result) => setWidgetPosts(result))
         } else {
             getRecentPosts()
-                .then((result) => setRelatedPosts(result))
+                .then((result) => setWidgetPosts(result))
         }
     }, [slug])
 
