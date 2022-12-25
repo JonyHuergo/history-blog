@@ -10,10 +10,18 @@ export default function Home({ posts }) {
         <title>History Blog</title>
         <meta name="description" content="Blog de historia" />
       </Head>
-      <div>
-        {posts.map(post => <PostCard post={post.node} key={post.node.title}/>)}
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+        <section className="lg:col-span-8 col-span-1">
+          {posts.map((post, index) => (
+            <PostCard key={index} post={post.node} />
+          ))}
+        </section>
+        <section className="lg:col-span-4 col-span-1">
+          <div className="lg:sticky relative top-8">
+            <PostWidget />
+          </div>
+        </section>
       </div>
-      <PostWidget/>
     </>
   )
 }
