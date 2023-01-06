@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import { submitComment } from "../services";
 
 const CommentsForm = ({ slug }) => {
     const [error, setError] = useState(false);
@@ -8,6 +9,47 @@ const CommentsForm = ({ slug }) => {
     const nameEl = useRef();
     const emailEl = useRef();
     const storeDataEl = useRef();
+
+    useEffect(() => {
+            nameEl.current.value = window.localStorage.getItem("name");
+            emailEl.current.value = window.localStorage.getItem("email");
+    }, [])
+
+    const handleCommentSubmission = () => {
+        setError(false);
+        const { value: comment } = commentEl.current
+        const { value: name } = nameEl.current
+        const { value: email } = emailEl.current
+        const { checked: storeData } = storeDataEl.current
+
+        if (!name || !email || !comment) {
+        setError(true);
+        return;
+        }
+
+        const commentObj = {
+            name,
+            email,
+            comment,
+            slug,
+        };
+
+        if (storeData) {
+            window.localStorage.setItem('name', name);
+            window.localStorage.setItem('email', email);
+        } else {
+            window.localStorage.removeItem('name');
+            window.localStorage.removeItem('email');
+        }
+
+        submitComment(commentObj)
+            .then((res) => {
+                setShowSuccessMessage(true);
+                setTimeout(() => {
+                    setShowSuccessMessage(false);
+                }, 3000);
+            })
+    }
 
     return (
         <section className="bg-white shadow-lg rounded-lg p-8 pb-12 mb-8">
@@ -36,11 +78,23 @@ const CommentsForm = ({ slug }) => {
                     name="email"
                 />
             </div>
+            <div className="grid grid-cols-1 gap-4 mb-4">
+                <div>
+                    <input
+                        ref={storeDataEl}
+                        type="checkbox"
+                        id="storeData"
+                        name="storeData"
+                        value="true"
+                    />
+                    <label className="text-gray-500 cursor-pointer ml-2" htmlFor="storeData">Guardar nombre y mail</label>
+                </div>
+            </div>
             {error && <p className="text-xs text-red-500">Se necesita completar todos los campos</p>}
             <div className="mt-8 w-32 mx-auto lg:w-auto">
                 <button
                     type="button"
-                    /* onClick={handleCommentSubmission} */
+                    onClick={handleCommentSubmission}
                     className="transition duration-500 ease font-semibold hover:bg-secondary hover:text-black inline-block bg-primary text-lg rounded-full text-white px-8 py-3 cursor-pointer"
                 >
                     Publicar
