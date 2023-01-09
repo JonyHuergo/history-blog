@@ -34,9 +34,7 @@ img {
 /* BACKGROUND */
 
 body {
-  background-image: url("../public/bg.svg");
-  background-size: 240px;
-  background-color: #14213D;
+  background-color: white;
 }
 
 /* ////////// */
