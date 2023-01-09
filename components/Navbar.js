@@ -2,10 +2,10 @@ import Link from "next/link";
 
 const Navbar = () => {
     return (
-        <nav className="container transform duration-300 mx-auto text-neutral-light bg-transparent hover:bg-neutral-light hover:text-neutral-dark rounded-lg h-28 hover:shadow-xl">
-            <div className="md:float-left block">
+        <nav className="container bg-transparent text-neutral-dark h-1 mb-20 mt-12 lg:px-8">
+            <div className="md:float-left block h-1">
                 <Link href={"/"}>
-                    <h1 className="cursor-pointer font-bold text-4xl">HISTORIA</h1>
+                    <h1 className="cursor-pointer font-bold text-4xl lg:text-6xl">HISTORY-BLOG</h1>
                 </Link>
             </div>
         </nav>

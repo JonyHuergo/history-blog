@@ -11,7 +11,7 @@ const PostCard = ({ post }) => {
     }, []); 
 
     return (
-        <article className="bg-neutral-light shadow-lg rounded-lg lg:p-8 pb-12 mb-8">
+        <article className="bg-neutral-light shadow-lg rounded-lg lg:px-8 pb-12 mb-8">
             <div className="relative overflow-hidden pb-80 mb-6">
                 <img
                     src={post.featuredImage.url}
