@@ -11,7 +11,7 @@ const Categories = () => {
     }, [])
 
     return (
-        <div className="bg-transparent border-2 border-black shadow-lg rounded-lg p-8 mb-8">
+        <div className="bg-transparent border-2 border-black shadow-lg rounded-lg p-8 mb-8 mx-8 lg:mx-0">
             <h3 className="text-xl mb-8 font-semibold border-b border-black pb-4">
                 Temas
             </h3>
