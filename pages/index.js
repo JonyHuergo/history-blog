@@ -3,6 +3,7 @@ import { getPosts } from '../services'
 import PostCard from '../components/PostCard';
 import PostWidget from '../components/PostWidget';
 import Categories from '../components/Categories';
+import { FeaturedPosts } from '../sections/index';
 
 export default function Home({ posts }) {
   return (
@@ -11,6 +12,7 @@ export default function Home({ posts }) {
         <title>History Blog</title>
         <meta name="description" content="Blog de historia" />
       </Head>
+      <FeaturedPosts />
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
         <section className="lg:col-span-8 col-span-1">
           {posts.map((post, index) => (
