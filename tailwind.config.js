@@ -13,6 +13,10 @@ module.exports = {
         "neutral-light": "#FFFFFF",
         "neutral-dark": "#000000"
       },
+      fontFamily: {
+        nunito: ["Nunito"],
+        title: ["Poppins"],
+      },
     },
   },
   plugins: [],
