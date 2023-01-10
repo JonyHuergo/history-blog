@@ -11,8 +11,8 @@ const Categories = () => {
     }, [])
 
     return (
-        <div className="bg-neutral-light shadow-lg rounded-lg p-8 mb-8">
-            <h3 className="text-xl mb-8 font-semibold border-b border-secondary pb-4">
+        <div className="bg-transparent border-2 border-black shadow-lg rounded-lg p-8 mb-8">
+            <h3 className="text-xl mb-8 font-semibold border-b border-black pb-4">
                 Temas
             </h3>
             {categories.map((category, index) => (
