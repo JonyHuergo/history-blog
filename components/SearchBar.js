@@ -5,10 +5,15 @@ import Link from 'next/link';
 const SearchBar = ({ placeholder, data }) => {
     const [filteredData, setFilteredData] = useState([]);
 
+    const removeAccents = (str) => {
+        return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+    } 
+
     const handleFilter = (event) => {
-        const searchWord = event.target.value;
+        const searchWord = removeAccents(event.target.value.toLowerCase());
         const newFilter = data.filter((value) => {
-            return value.node.title.toLowerCase().includes(searchWord.toLowerCase());
+            const title = removeAccents(value.node.title.toLowerCase())
+            return title.includes(searchWord);
         });
 
         if (searchWord === "") {
