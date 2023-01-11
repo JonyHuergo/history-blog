@@ -1,7 +1,15 @@
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import SearchBar from "./SearchBar";
+import { getPosts } from '../services'
 
 const Navbar = () => {
+    const [data, setData] = useState([]);
+    useEffect(() => {
+        getPosts()
+            .then((result) => setData(result))
+    }, []);
+
     return (
         <nav className="container bg-transparent text-neutral-dark h-1 mb-20 mt-12 lg:px-8 col-span-3 md:col-span-6">
             <div className="md:float-left block h-1">
@@ -9,9 +17,10 @@ const Navbar = () => {
                     <h1 className="cursor-pointer font-title font-bold text-4xl md:text-6xl">HISTORY-BLOG</h1>
                 </Link>
             </div>
-            <SearchBar placeholder="Buscar posts"/>
+            <SearchBar placeholder="Buscar posts" data={data} />
         </nav>
     );
 }
  
 export default Navbar;
+

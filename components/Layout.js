@@ -1,5 +1,4 @@
 import Navbar from './Navbar'
-import SearchBar from './SearchBar'
 
 const Layout = ({children}) => {
     return ( 
