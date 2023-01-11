@@ -95,7 +95,7 @@ const CommentsForm = ({ slug }) => {
                 <button
                     type="button"
                     onClick={handleCommentSubmission}
-                    className="transition duration-500 ease font-semibold hover:bg-secondary hover:text-black inline-block bg-primary text-lg rounded-full text-white px-8 py-3 cursor-pointer"
+                    className="transition duration-500 ease font-semibold hover:bg-white border-2 hover:border-black hover:text-black inline-block bg-black text-lg rounded-full text-white px-8 py-3 cursor-pointer"
                 >
                     Publicar
                 </button>
