@@ -9,11 +9,18 @@ const SearchBar = ({ placeholder, data }) => {
                 <div className='absolute right-2 top-2'>
                     <SearchIcon/>
                 </div>
-                <div className='bg-white rounded-lg absolute left-0 bottom--20 z-50 border-2 border-black mt-2 h-[11rem] overflow-scroll overflow-x-hidden'>
+                <div
+                    className='bg-white rounded-lg absolute left-0 bottom--20 z-50 border-2 border-black mt-2 h-[10rem] overflow-scroll overflow-x-hidden
+                    scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-transparent scrollbar-thumb-rounded-full scrollbar-track-rounded-full'
+                >
                     {data.map((post, index) => {
                         return (
-                            <div key={index} className="py-2 px-4 first:pt-4">
-                                <Link href={`./post/${post.node.slug}`}>{post.node.title}</Link>
+                            <div key={index} className="hover:bg-gray-300">
+                            <Link href={`../post/${post.node.slug}`}>
+                                <div className="py-2 px-4">
+                                    {post.node.title}
+                                </div>
+                            </Link>
                             </div>
                         )
                     })}
