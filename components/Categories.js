@@ -18,7 +18,7 @@ const Categories = () => {
             {categories.map((category, index) => (
                 <div key={index} className="flex items-center w-full mb-4">
                     <div className="flex-grow ml-4">
-                        <Link href={`/post/${category.slug}`} className="text-md">{category.name}</Link>
+                        <Link href={`../category/${category.slug}`} className="text-md">{category.name}</Link>
                     </div>
                 </div>
             ))}
