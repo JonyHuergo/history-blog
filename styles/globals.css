@@ -49,5 +49,7 @@ body {
 }
 
 .react-multi-carousel-list {
-  overflow: visible!important;
+  /* overflow: visible!important; */
+  padding-top: 0.5rem;
+  padding-bottom: 4rem;
 }
