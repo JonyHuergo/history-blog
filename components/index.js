@@ -8,3 +8,4 @@ export { default as Comments } from './Comments';
 export { default as CommentsForm } from './CommentsForm';
 export { default as FeaturedPostCard } from './FeaturedPostCard';
 export { default as SearchBar } from './SearchBar';
+export { default as Loader } from './Loader';
