@@ -2,8 +2,15 @@ import { getCategoryPosts, getCategory, getCategories } from '../../services'
 import PostCard from '../../components/PostCard';
 import PostWidget from '../../components/PostWidget';
 import Categories from '../../components/Categories';
+import { useRouter } from "next/router";
+import Loader from "../../components";
 
 export default function Category({ posts }) {
+  const router = useRouter();
+
+  if(router.isFallback) {
+    return <Loader/>
+  }
   return (
     <>
       <h2 className='text-2xl font-bold'>Posts relacionados al tema:</h2>
