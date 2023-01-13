@@ -3,7 +3,7 @@ import PostCard from '../../components/PostCard';
 import PostWidget from '../../components/PostWidget';
 import Categories from '../../components/Categories';
 import { useRouter } from "next/router";
-import Loader from "../../components";
+import Loader from "../../components/Loader";
 
 export default function Category({ posts }) {
   const router = useRouter();

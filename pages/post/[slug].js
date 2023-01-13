@@ -2,7 +2,7 @@ import { getPosts, getPostDetails } from "../../services";
 import { PostDetail } from "../../components";
 import dynamic from 'next/dynamic'
 import { useRouter } from "next/router";
-import Loader from "../../components";
+import Loader from "../../components/Loader";
 
 const DynamicComments = dynamic(async () => import('../../components/Comments'), {
   loading: () => 'Loading...',
