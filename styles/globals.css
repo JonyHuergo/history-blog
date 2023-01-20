@@ -34,23 +34,17 @@ img {
 /* BACKGROUND */
 
 body {
-  /* background-color: white; */
   background-image: radial-gradient(circle farthest-corner at 1.3% 2.8%, rgba(239, 249, 249, 1) 0%, rgba(182, 199, 226, 1) 100.2%);
   min-height: 100vh;
 }
 
 /* ////////// */
 
-/* .post-card {
-  background-image: radial-gradient(circle farthest-corner at 10% 20%, rgba(90, 92, 106, 1) 0%, rgba(32, 45, 58, 1) 81.3%);
-} */
-
 .feat-posts {
-  margin-left: 2rem;
+  margin-left: 0.21rem;
 }
 
 .react-multi-carousel-list {
-  /* overflow: visible!important; */
   padding-top: 0.5rem;
   padding-bottom: 4rem;
 }

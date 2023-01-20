@@ -12,7 +12,7 @@ const FeaturedPostCard = ({ post }) => {
     }, []);  
 
     return (
-        <div className="relative h-72 mx-4 hover:shadow-2xl hover:scale-105">
+        <div className="relative h-72 hover:shadow-2xl hover:scale-105">
             <div className="absolute rounded-lg bg-center bg-no-repeat bg-cover shadow-md inline-block w-full h-72" style={{ backgroundImage: `url('${post.featuredImage.url}')` }} />
             {/* <div className="absolute rounded-lg bg-center bg-gradient-to-b opacity-50 from-gray-600 via-gray-900 to-black w-full h-72" /> */}
             <div className="absolute rounded-lg bg-center bg-gradient-to-b opacity-50 from-white via-gray-100 to-gray-400 w-full h-72" />

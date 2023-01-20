@@ -6,8 +6,7 @@ const PostWidget = ({ categories, slug }) => {
     const [widgetPosts, setWidgetPosts] = useState([])
 
     useEffect(() => {
-        console.log(categories)
-        if(slug/*  && categories.l */) {
+        if(slug) {
             getRelatedPosts(categories, slug)
                 .then((result) => setWidgetPosts(result))
         } else {
