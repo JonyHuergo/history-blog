@@ -55,8 +55,8 @@ const Navbar = () => {
                     {searchBarOpen && <div className="absolute top-[-1rem] sm:bottom-0 right-8 md:top-0 md:right-16"><SearchBar placeholder="Buscar posts" data={data} /></div>}
                     <button onClick={manageSearchBar}>
                         {searchBarOpen ?
-                            <CloseIcon className="text-4xl"/> :
-                            <SearchIcon className="text-4xl"/>}
+                            <CloseIcon className="text-4xl" id="closeIcon"/> :
+                            <SearchIcon className="text-4xl" id="searchIcon"/>}
                     </button>
                 </div>
             </nav>
