@@ -52,8 +52,8 @@ const Navbar = () => {
                     }
                 </div>
                 <div className="col-span-1 lg:col-span-6 content-center pt-0 px-4 md:py-4 lg:p-0 relative">
-                    {searchBarOpen && <div className="absolute top-[-1rem] sm:bottom-0 right-8 md:top-0 md:right-16"><SearchBar placeholder="Buscar posts" data={data} /></div>}
-                    <button onClick={manageSearchBar}>
+                    {searchBarOpen && <div className="absolute top-[-1rem] sm:bottom-0 right-10 md:top-0 md:right-16"><SearchBar placeholder="Buscar posts" data={data} /></div>}
+                    <button className="absolute top-0 left-0 sm:static" onClick={manageSearchBar}>
                         {searchBarOpen ?
                             <CloseIcon className="text-4xl" id="closeIcon"/> :
                             <SearchIcon className="text-4xl" id="searchIcon"/>}
